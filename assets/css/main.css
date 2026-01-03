@@ -1,11 +1,6 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
 
-/*
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -3219,3 +3214,191 @@ input, select, textarea {
 			}
 
 	}
+	/* Click callout */
+.click-callout {
+	text-align: center;
+	margin-bottom: 0.5rem;
+	animation: float 1.6s ease-in-out infinite;
+	pointer-events: none; /* doesn't block clicks */
+  }
+  
+  .callout-text {
+	display: block;
+	font-size: 0.85rem;
+	font-weight: 600;
+	color: #666;
+  }
+  
+  .callout-arrow {
+	display: block;
+	font-size: 1.4rem;
+  }
+  
+  /* Floating animation */
+  @keyframes float {
+	0% {
+	  transform: translateY(0);
+	}
+	50% {
+	  transform: translateY(-6px);
+	}
+	100% {
+	  transform: translateY(0);
+	}
+  }
+  .work-item:hover .click-callout {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+  }
+  section p {
+	animation: fadeUp 0.8s ease both;
+  }
+  
+
+  .work-item h3 a {
+	text-decoration: none;
+	background-image: linear-gradient(#6c63ff, #6c63ff);
+	background-size: 0% 2px;
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	transition: background-size 0.3s ease;
+  }
+  
+  .work-item h3 a:hover {
+	background-size: 100% 2px;
+  }
+  h2 span,
+h2 emoji {
+  display: inline-block;
+  animation: emojiFloat 2s ease-in-out infinite;
+}
+
+/* Start hidden only while preload is active */
+body.is-preload section p {
+	opacity: 0;
+	transform: translateY(12px);
+  }
+  
+  /* Animate in once preload class is removed */
+  body:not(.is-preload) section p {
+	animation: fadeUp 0.9s ease both;
+  }
+  
+  @keyframes fadeUp {
+	from {
+	  opacity: 0;
+	  transform: translateY(12px);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+
+  body:not(.is-preload) section p:nth-of-type(1) { animation-delay: 0.05s; }
+body:not(.is-preload) section p:nth-of-type(2) { animation-delay: 0.15s; }
+body:not(.is-preload) section p:nth-of-type(3) { animation-delay: 0.25s; }
+
+/* Gallery tiles */
+.box.alt .image.fit {
+	display: block;
+	overflow: hidden;
+	border-radius: 16px;
+	box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+	transform: translateY(0);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .box.alt .image.fit:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 14px 34px rgba(0,0,0,0.14);
+  }
+  
+  .box.alt .image.fit img {
+	display: block;
+	transition: transform 0.35s ease, filter 0.35s ease;
+  }
+  
+  .box.alt .image.fit:hover img {
+	transform: scale(1.04);
+  }
+  
+  
+
+
+
+
+  .box.alt .row .col-4 {
+	transition: opacity 0.2s ease;
+  }
+  
+  .box.alt .row:hover .col-4 {
+	opacity: 0.65;
+  }
+  
+  .box.alt .row:hover .col-4:hover {
+	opacity: 1;
+  }
+  
+
+
+  .box.alt .image.fit img {
+	width: 100%;
+	height: 320px;     /* adjust */
+	object-fit: cover; /* keeps the grid uniform */
+  }
+
+  
+
+
+  /* Image wrapper clips overflow */
+.box.alt .image.fit {
+	overflow: hidden;
+	border-radius: 16px; /* optional */
+  }
+  
+  /* Image itself */
+  .box.alt .image.fit img {
+	display: block;
+	transform: scale(1);
+	transition: transform 0.35s ease;
+  }
+  
+
+
+
+  /* The gallery item (the picture tile) */
+.box.alt .image.fit {
+	display: block;
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+	transform: scale(1);
+	will-change: transform;
+  }
+  
+  /* Enlarge the entire picture on hover */
+  .box.alt .image.fit:hover {
+	transform: scale(2);
+	z-index: 2; /* keeps it above neighbors */
+	box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+  }
+
+
+
+
+  /* Enlarge gallery photos AND header avatar on hover */
+.box.alt .image.fit,
+#header .image.avatar {
+  display: block;
+  transform: scale(1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  will-change: transform;
+}
+
+.box.alt .image.fit:hover,
+#header .image.avatar:hover {
+  transform: scale(2);
+  z-index: 2;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+}
+  
+  
