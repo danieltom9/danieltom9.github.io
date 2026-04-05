@@ -3400,5 +3400,13 @@ body:not(.is-preload) section p:nth-of-type(3) { animation-delay: 0.25s; }
   z-index: 2;
   box-shadow: 0 16px 40px rgba(0,0,0,0.18);
 }
+
+.work-item .image:before {
+	display: none !important;
+  }
+  
+  .work-item .image:after {
+	display: none !important;
+  }
   
   
