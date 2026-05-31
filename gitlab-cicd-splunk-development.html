@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Creating Gitlab CI/CD pipeline to streamline Splunk development - Daniel Tom</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="case-study-detail">
+		<main class="case-study-article">
+			<a class="case-study-back" href="case-studies.html">Back to Case Studies</a>
+			<header>
+				<p class="case-study-label">Case Study</p>
+				<h1>Creating Gitlab CI/CD pipeline to streamline Splunk development</h1>
+			</header>
+
+			<p>My team maintained a large portfolio of compliance dashboards in Splunk, supported by approximately 150 Splunk searches that powered reporting and operational analytics. As the number of developers and searches grew, our development process became increasingly difficult to manage because our Splunk environment lacked proper version control capabilities. Changes to Splunk searches could not be easily tracked, audited, or rolled back, which frequently resulted in developers accidentally overwriting production-ready SPL queries and spending significant time recreating broken logic.</p>
+
+			<p>As one of the primary owners of these Splunk searches, I identified this as a major operational and developer productivity issue and began researching ways to modernize our development workflow. During this process, I discovered the Splunk SDK and recognized an opportunity to build a version-controlled CI/CD framework for Splunk development. After reviewing the SDK documentation and evaluating the technical feasibility, I took ownership of the architecture, stakeholder coordination, and Python development required to implement the solution.</p>
+
+			<p>I designed and developed a GitLab CI/CD pipeline that enabled developers to create, edit, delete, validate, and roll back Splunk searches through Git-based version control workflows. The pipeline integrated automated validation checks for SPL and XML configuration files before deployment, helping prevent invalid code from reaching the Splunk environment.</p>
+
+			<p>This solution significantly improved the developer experience by introducing traceability, rollback capabilities, and standardized deployment processes for Splunk development. It eliminated inefficient manual tracking methods such as maintaining Word documents and wiki pages, reduced time spent debugging overwritten searches, and streamlined onboarding for new developers through centralized version history and deployment workflows in GitLab. As a result, developers were able to iterate more quickly, collaborate more effectively, and spend less time recovering lost or broken search logic.</p>
+		</main>
+	</body>
+</html>
