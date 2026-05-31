@@ -11,6 +11,7 @@
 		$header = $('#header'),
 		$footer = $('#footer'),
 		$main = $('#main'),
+		$tabs = $('.site-tabs'),
 		settings = {
 
 			// Parallax background effect?
@@ -57,6 +58,15 @@
 
 		breakpoints.on('>medium', function() {
 			$footer.appendTo($header);
+		});
+
+	// Navigation tabs.
+		$window.on('scroll.site_tabs', function() {
+			$tabs.toggleClass('is-hidden', $window.scrollTop() > 25);
+		});
+
+		$window.on('load', function() {
+			$window.triggerHandler('scroll.site_tabs');
 		});
 
 	// Header.
