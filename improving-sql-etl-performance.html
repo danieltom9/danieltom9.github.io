@@ -18,7 +18,7 @@
 
 			<p>As the owner of several customer-facing dashboards, I worked directly with stakeholders impacted by these delays and identified ETL performance optimization as a key opportunity for improvement. After analyzing the existing SQL workflow, I found that the pipeline relied on a single monolithic job containing numerous sequential transformation and normalization steps. Because each operation executed serially, slower queries created bottlenecks that significantly increased total runtime.</p>
 
-			<p>To improve performance and scalability, I redesigned the ETL workflow by decomposing the monolithic process into multiple smaller SQL jobs organized by logical transformation stages. I then implemented concurrent execution across these jobs, allowing independent workloads to run in parallel rather than sequentially. This optimization significantly reduced total ETL runtime, improved data freshness for reporting, and increased the reliability of downstream dashboards and compliance metrics consumed by stakeholders.</p>
+			<p>To improve performance and scalability, I redesigned the ETL workflow by decomposing the monolithic process into multiple smaller SQL jobs organized by logical transformation stages. I then implemented concurrent execution across these jobs, allowing independent workloads to run in parallel rather than sequentially. This optimization significantly reduced total ETL runtime from ~6 hours to 2.5-3 hours, improved data freshness for reporting, and increased the reliability of downstream dashboards and compliance metrics consumed by stakeholders.</p>
 		</main>
 	</body>
 </html>
