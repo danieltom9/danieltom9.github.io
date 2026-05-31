@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Improving SQL ETL Performance - Daniel Tom</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="case-study-detail">
+		<main class="case-study-article">
+			<a class="case-study-back" href="case-studies.html">Back to Case Studies</a>
+			<header>
+				<p class="case-study-label">Case Study</p>
+				<h1>Improving SQL ETL Performance</h1>
+			</header>
+
+			<p>One of the major challenges my team faced was processing the large volume of compliance data required to effectively monitor Intel’s attack surface. Our ETL pipeline processed more than 250 million records daily, and the primary SQL refresh job responsible for normalizing and updating reporting tables could take over six hours to complete. These long runtimes created delays in dashboard reporting, introduced data freshness issues, and led to discrepancies between raw and reported data.</p>
+
+			<p>As the owner of several customer-facing dashboards, I worked directly with stakeholders impacted by these delays and identified ETL performance optimization as a key opportunity for improvement. After analyzing the existing SQL workflow, I found that the pipeline relied on a single monolithic job containing numerous sequential transformation and normalization steps. Because each operation executed serially, slower queries created bottlenecks that significantly increased total runtime.</p>
+
+			<p>To improve performance and scalability, I redesigned the ETL workflow by decomposing the monolithic process into multiple smaller SQL jobs organized by logical transformation stages. I then implemented concurrent execution across these jobs, allowing independent workloads to run in parallel rather than sequentially. This optimization significantly reduced total ETL runtime, improved data freshness for reporting, and increased the reliability of downstream dashboards and compliance metrics consumed by stakeholders.</p>
+		</main>
+	</body>
+</html>
