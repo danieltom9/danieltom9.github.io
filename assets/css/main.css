@@ -3384,69 +3384,90 @@ body:not(.is-preload) section p:nth-of-type(3) { animation-delay: 0.25s; }
 	z-index: 3;
 }
 
-#photography .box.alt .image.fit {
+#photography .box.alt .baseball-card {
 	background:
-		linear-gradient(135deg, rgba(255,255,255,0.95), rgba(242,247,245,0.98)),
-		#ffffff;
-	border: 1px solid rgba(73, 191, 157, 0.35);
-	border-radius: 8px;
+		radial-gradient(circle at 82% 34%, #f5d94c 0 9%, transparent 9.5%),
+		linear-gradient(135deg, rgba(255,255,255,0.16), transparent 28%),
+		linear-gradient(160deg, #147988 0%, #1d98a8 60%, #0f6073 100%);
+	border: 8px solid #f8f1dc;
+	border-radius: 7px;
 	box-shadow:
-		0 12px 28px rgba(31, 24, 21, 0.12),
-		inset 0 0 0 6px #ffffff,
-		inset 0 0 0 8px rgba(73, 191, 157, 0.16);
+		0 13px 26px rgba(31, 24, 21, 0.2),
+		inset 0 0 0 2px #29313b,
+		inset 0 0 0 6px rgba(248, 241, 220, 0.72);
 	display: block;
 	margin: 0;
 	overflow: hidden;
-	padding: 14px 14px 42px;
+	padding: 42px 18px 76px;
 	position: relative;
 	transform: scale(1);
 	transition: transform 0.25s ease, box-shadow 0.25s ease;
 	will-change: transform;
 }
 
-#photography .box.alt .image.fit:before {
-	background: linear-gradient(90deg, #49bf9d, #d9b44a, #34495e);
-	content: '';
+#photography .box.alt .baseball-card:before {
+	background: #f8f1dc;
+	border: 2px solid #29313b;
+	border-radius: 2px;
+	box-shadow: 3px 3px 0 rgba(41, 49, 59, 0.24);
+	color: #2f7f48;
+	content: "Tom's";
 	display: block;
-	height: 5px;
-	left: 14px;
-	position: absolute;
-	right: 14px;
-	top: 14px;
-	z-index: 1;
-}
-
-#photography .box.alt .image.fit:after {
-	background: rgba(255, 255, 255, 0.9);
-	border-top: 1px solid rgba(73, 191, 157, 0.22);
-	bottom: 12px;
-	color: #34495e;
-	content: 'DANIEL TOM PHOTO';
-	display: block;
-	font-size: 0.58em;
+	font-family: Georgia, 'Times New Roman', serif;
+	font-size: 0.84em;
+	font-style: italic;
 	font-weight: 700;
-	left: 14px;
-	letter-spacing: 0;
+	left: 17px;
 	line-height: 1;
-	padding-top: 9px;
+	padding: 4px 7px 3px;
 	position: absolute;
-	right: 14px;
-	text-align: center;
+	text-shadow: 1px 1px 0 rgba(255,255,255,0.8);
+	top: 15px;
+	transform: rotate(-3deg);
+	z-index: 2;
 }
 
-#photography .box.alt .image.fit:hover {
+#photography .box.alt .baseball-card:after {
+	background:
+		linear-gradient(180deg, #fdf7df 0%, #ead995 100%);
+	border: 3px solid #29313b;
+	bottom: 17px;
 	box-shadow:
-		0 18px 45px rgba(31, 24, 21, 0.24),
-		inset 0 0 0 6px #ffffff,
-		inset 0 0 0 8px rgba(73, 191, 157, 0.2);
+		inset 0 0 0 2px rgba(255,255,255,0.62),
+		0 -4px 0 rgba(41, 49, 59, 0.18);
+	color: #29313b;
+	content: attr(data-card-title) '\A 100 CLASSIC PHOTOS';
+	display: block;
+	font-family: Georgia, 'Times New Roman', serif;
+	font-size: 0.78em;
+	font-weight: 800;
+	left: 16px;
+	letter-spacing: 0;
+	line-height: 1.15;
+	padding: 8px 6px 6px;
+	position: absolute;
+	right: 16px;
+	text-align: center;
+	text-shadow: 1px 1px 0 #ffffff;
+	white-space: pre;
+}
+
+#photography .box.alt .baseball-card:hover {
+	box-shadow:
+		0 22px 48px rgba(31, 24, 21, 0.32),
+		inset 0 0 0 2px #29313b,
+		inset 0 0 0 6px rgba(248, 241, 220, 0.72);
 	transform: scale(2);
 	z-index: 4;
 }
 
-#photography .box.alt .image.fit img {
+#photography .box.alt .baseball-card img {
 	aspect-ratio: 4 / 5;
-	border: 1px solid rgba(31, 24, 21, 0.12);
-	border-radius: 4px;
+	background: #f8f1dc;
+	border: 7px solid #f8f1dc;
+	box-shadow:
+		0 0 0 2px #29313b,
+		0 7px 0 rgba(41, 49, 59, 0.2);
 	display: block;
 	height: 320px;
 	object-fit: cover;
