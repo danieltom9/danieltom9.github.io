@@ -2607,7 +2607,7 @@ input, select, textarea {
 			margin: 0 0 0.5em 0;
 		}
 
-		.work-item .treasure-link {
+		.work-item .briefcase-link {
 			display: inline-block;
 			height: 4.75em;
 			margin: 0.15em 0 0.9em 0;
@@ -2616,12 +2616,12 @@ input, select, textarea {
 			width: 5.8em;
 		}
 
-			.work-item .treasure-link:focus-visible {
+			.work-item .briefcase-link:focus-visible {
 				outline: solid 3px #49bf9d;
 				outline-offset: 0.35em;
 			}
 
-		.treasure-box {
+		.briefcase {
 			display: block;
 			height: 100%;
 			position: relative;
@@ -2630,113 +2630,140 @@ input, select, textarea {
 			width: 100%;
 		}
 
-			.treasure-link:hover .treasure-box,
-			.treasure-link:focus-visible .treasure-box {
+			.briefcase-link:hover .briefcase,
+			.briefcase-link:focus-visible .briefcase {
 				transform: translateY(-0.25em);
 			}
 
-		.treasure-base,
-		.treasure-lid,
-		.treasure-gold {
+		.briefcase-base,
+		.briefcase-lid,
+		.briefcase-handle,
+		.briefcase-papers {
 			display: block;
 			position: absolute;
 		}
 
-		.treasure-base {
+		.briefcase-handle {
+			border: solid 0.2em #3d2619;
+			border-bottom: 0;
+			border-radius: 0.85em 0.85em 0 0;
+			height: 1.2em;
+			left: 50%;
+			top: 0.12em;
+			transform: translateX(-50%);
+			width: 2.1em;
+			z-index: 1;
+		}
+
+		.briefcase-base {
 			background:
-				linear-gradient(90deg, transparent 0 18%, rgba(255,255,255,0.16) 18% 22%, transparent 22% 78%, rgba(255,255,255,0.16) 78% 82%, transparent 82%),
-				linear-gradient(180deg, #9f5b25 0%, #673816 100%);
-			border: solid 0.16em #3f2411;
-			border-radius: 0.2em 0.2em 0.45em 0.45em;
+				linear-gradient(90deg, rgba(255,255,255,0.11) 0 14%, transparent 14% 86%, rgba(0,0,0,0.12) 86%),
+				linear-gradient(180deg, #9a6239 0%, #684024 100%);
+			border: solid 0.16em #3d2619;
+			border-radius: 0.18em 0.18em 0.45em 0.45em;
 			bottom: 0.25em;
 			box-shadow:
-				inset 0 0.35em 0 rgba(255,255,255,0.12),
+				inset 0 0.4em 0 rgba(255,255,255,0.09),
 				0 0.45em 0.9em rgba(31, 24, 21, 0.2);
-			height: 2.45em;
+			height: 2.5em;
 			left: 0.35em;
 			overflow: hidden;
 			width: 5.1em;
+			z-index: 2;
 		}
 
-			.treasure-base:before {
-				background: #d9a93a;
-				border-left: solid 0.12em #3f2411;
-				border-right: solid 0.12em #3f2411;
+			.briefcase-base:before {
+				background: #d5a64d;
 				content: '';
-				height: 100%;
-				left: 50%;
+				height: 0.18em;
+				left: 0;
 				position: absolute;
-				top: 0;
-				transform: translateX(-50%);
-				width: 0.7em;
+				top: 0.72em;
+				width: 100%;
 			}
 
-			.treasure-base:after {
-				background: #f5d765;
-				border: solid 0.12em #3f2411;
-				border-radius: 50%;
+			.briefcase-base:after {
+				background: #f1c65d;
+				border: solid 0.1em #3d2619;
+				border-radius: 0.1em;
 				content: '';
-				height: 0.52em;
+				height: 0.44em;
 				left: 50%;
 				position: absolute;
-				top: 0.82em;
+				top: 0.55em;
 				transform: translateX(-50%);
-				width: 0.52em;
+				width: 0.62em;
 			}
 
-		.treasure-lid {
+		.briefcase-lid {
 			background:
-				linear-gradient(90deg, transparent 0 18%, rgba(255,255,255,0.15) 18% 22%, transparent 22% 78%, rgba(255,255,255,0.15) 78% 82%, transparent 82%),
-				linear-gradient(180deg, #b96d2f 0%, #7a4219 100%);
-			border: solid 0.16em #3f2411;
-			border-radius: 2.7em 2.7em 0.25em 0.25em;
-			bottom: 2.55em;
-			box-shadow: inset 0 0.35em 0 rgba(255,255,255,0.14);
-			height: 1.95em;
+				linear-gradient(90deg, rgba(255,255,255,0.14) 0 14%, transparent 14% 86%, rgba(0,0,0,0.1) 86%),
+				linear-gradient(180deg, #b8794b 0%, #80502f 100%);
+			border: solid 0.16em #3d2619;
+			border-radius: 0.42em 0.42em 0.16em 0.16em;
+			bottom: 2.3em;
+			box-shadow: inset 0 0.32em 0 rgba(255,255,255,0.12);
+			height: 1.45em;
 			left: 0.35em;
 			transform-origin: 50% 100%;
-			transition: transform 0.25s ease, bottom 0.25s ease;
+			transition: transform 0.25s ease, bottom 0.25s ease, box-shadow 0.25s ease;
 			width: 5.1em;
 			z-index: 3;
 		}
 
-			.treasure-lid:after {
-				background: #d9a93a;
-				border-left: solid 0.12em #3f2411;
-				border-right: solid 0.12em #3f2411;
+			.briefcase-lid:before {
+				background: #d5a64d;
 				content: '';
-				height: 100%;
-				left: 50%;
+				height: 0.18em;
+				left: 0;
 				position: absolute;
-				top: 0;
-				transform: translateX(-50%);
-				width: 0.7em;
+				top: 0.5em;
+				width: 100%;
 			}
 
-		.treasure-gold {
+			.briefcase-lid:after {
+				background: #f1c65d;
+				border: solid 0.1em #3d2619;
+				border-radius: 0.1em;
+				content: '';
+				height: 0.42em;
+				left: 50%;
+				position: absolute;
+				top: 0.35em;
+				transform: translateX(-50%);
+				width: 0.62em;
+			}
+
+		.briefcase-papers {
 			background:
-				radial-gradient(circle at 18% 55%, #fff0a8 0 0.22em, transparent 0.24em),
-				radial-gradient(circle at 42% 42%, #ffd95b 0 0.28em, transparent 0.3em),
-				radial-gradient(circle at 66% 54%, #f0b93c 0 0.24em, transparent 0.26em),
-				radial-gradient(circle at 84% 44%, #ffe680 0 0.2em, transparent 0.22em);
-			bottom: 2.15em;
-			height: 1.15em;
-			left: 0.75em;
+				linear-gradient(90deg, transparent 0 48%, #d9e1e6 48% 52%, transparent 52%),
+				linear-gradient(180deg, #ffffff 0 24%, #e7eef2 24% 28%, #ffffff 28% 52%, #e7eef2 52% 56%, #ffffff 56%);
+			border: solid 0.1em #c8d1d6;
+			border-radius: 0.08em;
+			bottom: 1.95em;
+			box-shadow:
+				-0.35em 0.16em 0 -0.03em #f7fbfc,
+				0.35em 0.1em 0 -0.03em #f7fbfc;
+			height: 1.3em;
+			left: 1.25em;
 			opacity: 0;
-			transform: translateY(0.45em);
+			transform: translateY(0.42em);
 			transition: opacity 0.2s ease, transform 0.25s ease;
-			width: 4.3em;
+			width: 3.3em;
 			z-index: 2;
 		}
 
-			.treasure-link:hover .treasure-lid,
-			.treasure-link:focus-visible .treasure-lid {
-				bottom: 2.95em;
-				transform: rotateX(58deg);
+			.briefcase-link:hover .briefcase-lid,
+			.briefcase-link:focus-visible .briefcase-lid {
+				bottom: 2.72em;
+				box-shadow:
+					inset 0 0.32em 0 rgba(255,255,255,0.12),
+					0 0.35em 0.65em rgba(31, 24, 21, 0.16);
+				transform: rotateX(62deg);
 			}
 
-			.treasure-link:hover .treasure-gold,
-			.treasure-link:focus-visible .treasure-gold {
+			.briefcase-link:hover .briefcase-papers,
+			.briefcase-link:focus-visible .briefcase-papers {
 				opacity: 1;
 				transform: translateY(0);
 			}
