@@ -3436,7 +3436,7 @@ body:not(.is-preload) section p:nth-of-type(3) { animation-delay: 0.25s; }
 		inset 0 0 0 2px rgba(255,255,255,0.62),
 		0 -4px 0 rgba(41, 49, 59, 0.18);
 	color: #29313b;
-	content: attr(data-card-title) '\A 100 CLASSIC PHOTOS';
+	content: attr(data-card-title) '\A';
 	display: block;
 	font-family: Georgia, 'Times New Roman', serif;
 	font-size: 0.78em;
