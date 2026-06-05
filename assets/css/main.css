@@ -2607,6 +2607,140 @@ input, select, textarea {
 			margin: 0 0 0.5em 0;
 		}
 
+		.work-item .treasure-link {
+			display: inline-block;
+			height: 4.75em;
+			margin: 0.15em 0 0.9em 0;
+			position: relative;
+			text-decoration: none;
+			width: 5.8em;
+		}
+
+			.work-item .treasure-link:focus-visible {
+				outline: solid 3px #49bf9d;
+				outline-offset: 0.35em;
+			}
+
+		.treasure-box {
+			display: block;
+			height: 100%;
+			position: relative;
+			transform: translateY(0);
+			transition: transform 0.25s ease;
+			width: 100%;
+		}
+
+			.treasure-link:hover .treasure-box,
+			.treasure-link:focus-visible .treasure-box {
+				transform: translateY(-0.25em);
+			}
+
+		.treasure-base,
+		.treasure-lid,
+		.treasure-gold {
+			display: block;
+			position: absolute;
+		}
+
+		.treasure-base {
+			background:
+				linear-gradient(90deg, transparent 0 18%, rgba(255,255,255,0.16) 18% 22%, transparent 22% 78%, rgba(255,255,255,0.16) 78% 82%, transparent 82%),
+				linear-gradient(180deg, #9f5b25 0%, #673816 100%);
+			border: solid 0.16em #3f2411;
+			border-radius: 0.2em 0.2em 0.45em 0.45em;
+			bottom: 0.25em;
+			box-shadow:
+				inset 0 0.35em 0 rgba(255,255,255,0.12),
+				0 0.45em 0.9em rgba(31, 24, 21, 0.2);
+			height: 2.45em;
+			left: 0.35em;
+			overflow: hidden;
+			width: 5.1em;
+		}
+
+			.treasure-base:before {
+				background: #d9a93a;
+				border-left: solid 0.12em #3f2411;
+				border-right: solid 0.12em #3f2411;
+				content: '';
+				height: 100%;
+				left: 50%;
+				position: absolute;
+				top: 0;
+				transform: translateX(-50%);
+				width: 0.7em;
+			}
+
+			.treasure-base:after {
+				background: #f5d765;
+				border: solid 0.12em #3f2411;
+				border-radius: 50%;
+				content: '';
+				height: 0.52em;
+				left: 50%;
+				position: absolute;
+				top: 0.82em;
+				transform: translateX(-50%);
+				width: 0.52em;
+			}
+
+		.treasure-lid {
+			background:
+				linear-gradient(90deg, transparent 0 18%, rgba(255,255,255,0.15) 18% 22%, transparent 22% 78%, rgba(255,255,255,0.15) 78% 82%, transparent 82%),
+				linear-gradient(180deg, #b96d2f 0%, #7a4219 100%);
+			border: solid 0.16em #3f2411;
+			border-radius: 2.7em 2.7em 0.25em 0.25em;
+			bottom: 2.55em;
+			box-shadow: inset 0 0.35em 0 rgba(255,255,255,0.14);
+			height: 1.95em;
+			left: 0.35em;
+			transform-origin: 50% 100%;
+			transition: transform 0.25s ease, bottom 0.25s ease;
+			width: 5.1em;
+			z-index: 3;
+		}
+
+			.treasure-lid:after {
+				background: #d9a93a;
+				border-left: solid 0.12em #3f2411;
+				border-right: solid 0.12em #3f2411;
+				content: '';
+				height: 100%;
+				left: 50%;
+				position: absolute;
+				top: 0;
+				transform: translateX(-50%);
+				width: 0.7em;
+			}
+
+		.treasure-gold {
+			background:
+				radial-gradient(circle at 18% 55%, #fff0a8 0 0.22em, transparent 0.24em),
+				radial-gradient(circle at 42% 42%, #ffd95b 0 0.28em, transparent 0.3em),
+				radial-gradient(circle at 66% 54%, #f0b93c 0 0.24em, transparent 0.26em),
+				radial-gradient(circle at 84% 44%, #ffe680 0 0.2em, transparent 0.22em);
+			bottom: 2.15em;
+			height: 1.15em;
+			left: 0.75em;
+			opacity: 0;
+			transform: translateY(0.45em);
+			transition: opacity 0.2s ease, transform 0.25s ease;
+			width: 4.3em;
+			z-index: 2;
+		}
+
+			.treasure-link:hover .treasure-lid,
+			.treasure-link:focus-visible .treasure-lid {
+				bottom: 2.95em;
+				transform: rotateX(58deg);
+			}
+
+			.treasure-link:hover .treasure-gold,
+			.treasure-link:focus-visible .treasure-gold {
+				opacity: 1;
+				transform: translateY(0);
+			}
+
 		.work-item p {
 			font-size: 0.8em;
 			line-height: 1.5em;
